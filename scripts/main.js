@@ -11,7 +11,6 @@ function getMovieData(search) {
     
 function getPosterData(ident) {
     var req = $.get(posterURL + "h=250&" + ident);
-    req
 } 
 
 function listMovies(orders) {
@@ -35,6 +34,9 @@ function addMovieSearchListner() {
 }
 
 function makeMovieElement(response) {
+    if ($movieDisplay.children()) {
+        $movieDisplay.empty();
+    }
     var responseArray = response["Search"];
     var $searchResults = $('<div></div>', {
         'class': 'results',
