@@ -3,17 +3,21 @@
 <head>
     <meta charset="utf-8"/>
     <title>myMovies</title>
-    <link rel="icon" href="" type="">
-     <link rel="stylesheet" href="styles/main.css">
-     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre:400,700|Abril+Fatface|Akronim|Alfa+Slab+One|Amarante|Carter+One" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <form class="search-form" data-role="search-form">
-        <input class="movie-search" type="text" name="movieSearch" data-role="movie-search" value="" placeholder="Find a movie." required>
-         <button type="submit" class="search-button">
-             <img class="search-image" src="images/search.png" alt="search button">
-         </button>
-    </form>
+    <nav class="main-nav">
+        <img src="images/hamburger.svg" alt="hamburger menu" height=30 width=30>
+        <h3 class="appname">myMovies</h3>
+        <form class="search-form" data-role="search-form">
+            <input class="movie-search" type="text" name="movieSearch" data-role="movie-search" value="" placeholder="Find a movie." required>
+            <button type="submit" class="search-button">
+                <img class="search-image" src="images/search.png" alt="search button">
+            </button>
+        </form>
+    </nav>
     <div class="display-movies" data-role="display-movies"></div>
 
 
