@@ -6,3 +6,8 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+.search-image {
+    width: .75rem;
+    height: .75rem;
+}
