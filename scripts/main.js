@@ -9,9 +9,9 @@ function getMovieData(search) {
         .then(makeMovieElement);
 } 
     
-function getPosterData(ident) {
-    var req = $.get(posterURL + "h=250&" + ident);
-} 
+// function getPosterData(ident) {
+//     var req = $.get(posterURL + "h=250&i=" + ident);
+// } 
 
 function listMovies(orders) {
     localStorage.setItem('priorOrders', JSON.stringify(orders));
@@ -46,10 +46,12 @@ function makeMovieElement(response) {
         var $movieDiv = $('<div></div>', {
         'class': 'movie',
         'data-draw': 'movie'
-        });
+    });
+        var $poster = makePosterElement(responseArray[i]["imdbID"], responseArray[i]['Title']);
         var $title = $('<span></span>', {
             'text': responseArray[i]['Title'] + " (" + responseArray[i]['Year'] + ")"
         })
+        $movieDiv.append($poster);
         $movieDiv.append($title);
         $searchResults.append($movieDiv);
     })
@@ -57,8 +59,11 @@ function makeMovieElement(response) {
     $movieDisplay.append($searchResults);
 }
 
-function makePosterElement() {
-
+function makePosterElement(ident, title) {
+    return $('<img>', {
+        'src': posterURL + "h=300&i=" + ident,
+        'alt': title + " movie poster"
+    });
 }
 
 function main() {
