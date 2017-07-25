@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
+  background-color: #FFE954;
 }
 
 *, *:before, *:after {
@@ -8,6 +9,32 @@ html {
 }
 
 .search-image {
-    width: .75rem;
-    height: .75rem;
+    width: .8rem;
+    height: .8rem;
+}
+
+.results {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.movie {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    height: 340px;
+    width: 185px;
+    margin: 3px;
+}
+
+.movie img {
+    margin: 0 auto;
+    height: 300px;
+    width: 180px;
+}
+
+.movie span {
+    color: #505457;
 }
