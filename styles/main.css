@@ -14,14 +14,19 @@ body {
   box-sizing: inherit;
 }
 
+.movie-reel {
+    height: 177px;
+    background-image: url("../images/moviereel.jpg");
+    background-repeat: repeat-x;
+}
+
 .main-nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #1A1C57;
     width: 100%;
-    padding: 0 10px;
+    padding: 0 15px;
     margin-bottom: 10px;
 }
 
@@ -40,6 +45,7 @@ body {
     -webkit-transform-origin: 50% 50% 0;
     transform-origin: 50% 50% 0;
 }
+
 .appname:hover {
     text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #00ffff , 0 0 70px #00ffff , 0 0 80px #00ffff , 0 0 100px #00ffff ;
 }
@@ -60,7 +66,7 @@ body {
     flex-direction: column;
     text-align: center;
     align-content: center;
-    height: 340px;
+    height: 360px;
     width: 185px;
     margin: 3px;
 }
@@ -73,4 +79,5 @@ body {
 
 .movie span {
     color: #505457;
+    margin-top: 2px;
 }

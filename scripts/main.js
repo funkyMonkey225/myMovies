@@ -49,6 +49,12 @@ function makeMovieElement(response) {
         'data-draw': 'movie',
         'id': responseArray[i]["imdbID"]
     });
+        var $imageDiv = $('<div></div>', {
+        'class': 'image-div',
+        'data-draw': 'image-div',
+    });
+        var $
+
         var $poster = makePosterElement(responseArray[i]["imdbID"], responseArray[i]['Title']);
         var $title = $('<span></span>', {
             'text': responseArray[i]['Title'] + " (" + responseArray[i]['Year'] + ")"
